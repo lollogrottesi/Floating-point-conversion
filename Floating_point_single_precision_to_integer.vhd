@@ -31,13 +31,13 @@ use IEEE.NUMERIC_STD.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Floating_point_to_integer is
+entity Floating_point_single_precision_to_integer is
     Port (FP_in : in std_logic_vector (31 downto 0);
           s_u: in std_logic;    --Specify if output format is signed or unsigned. 
           integer_out: out std_logic_vector (31 downto 0));
-end Floating_point_to_integer;
+end Floating_point_single_precision_to_integer;
 
-architecture Behavioral of Floating_point_to_integer is
+architecture Behavioral of Floating_point_single_precision_to_integer is
 signal signed_mantissa: std_logic_vector(24 downto 0);
 signal unisgned_mantissa: std_logic_vector(23 downto 0);
 signal mantissa: std_logic_vector(24 downto 0);
